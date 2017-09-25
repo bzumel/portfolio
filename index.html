@@ -42,13 +42,15 @@
 					<div class="labels" id="labelWork"><strong>My Work</strong></div>
 				</div>	
 				<div class="centroid" id="pathContainer">
-							<div class="path" id="path1"></div>
-  							<div class="path" id="path2"></div>
-  							<div class="path" id="path3"></div>
-  							<div class="path" id="path4"></div>
-  							<div class="path" id="path5"></div>
-  							<div class="path" id="path6"></div>
-  							<div class="path" id="path7"></div>
+
+
+					<div class="path" id="path1"></div>
+					<div class="path" id="path2"></div>
+					<div class="path" id="path3"></div>
+					<div class="path" id="path4"></div>
+					<div class="path" id="path5"></div>
+					<div class="path" id="path6"></div>
+					<div class="path" id="path7"></div>
 					
 				</div>
 				<div class="centroid" id="mask">					
@@ -56,6 +58,12 @@
 					<div id="lowerinnerCircle"></div>
 					<div id="pictureContainer"><img id="me" src="imgs/me.jpg"></div>
 					<div id="centroid">
+
+						<div class="data" id="data1"></div>
+						<div class="data" id="data2"></div>
+						<div class="data" id="data3"></div>
+						<div class="data" id="data4"></div>
+
 		  				<button onclick="function()" class="buttons" id="plButton"></button>
 		  			
 		  				<button onclick="function()" class="buttons" id="tlButton"></button>
@@ -177,7 +185,8 @@
 <script> 
     $("#skills").click(
     	function(){
-        $("#skillsContainer")
+    	$("#data1").animate({"left": "105"}).delay(200).animate({"left":"450", "top": "150px"}).delay(200)
+        $("#skillsContainer").delay(1000)
         // .animate({"left": "40%", "width": "20px"}).delay(200)
         	// .animate({"top":"35%", "left": "10%", "width": "10px", "height": "10px"}).delay(200)
         	// .animate({"left": "40%", "width": "10px", "height": "10px"}).delay(200)

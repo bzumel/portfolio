@@ -307,6 +307,35 @@ ul {
 	transform: translate(-50%, -50%;);
 }
 
+.data {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #3be307;
+	border: 5px solid #3be307;
+	box-shadow: 0 0 20px #3be307;
+}
+#data1 {
+	margin-top: 0%;
+	margin-left: -300px;
+	transform: translate(-50%, -50%);
+}
+#data2 {
+	margin-top: 50%;
+	margin-left: -380px;
+	transform: translate(-50%, -50%);
+}
+#data3 {
+	margin-top: 100%;
+	margin-left: -317px;
+	transform: translate(-50%, -50%);
+}
+#data4 {
+	margin-top: 0%;
+	margin-left: 617px;
+	transform: translate(-50%, -50%);
+}
 .path {
 	position: absolute;
 	border-top: 5px solid green;
