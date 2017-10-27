@@ -42,7 +42,7 @@
 					<div class="labels" id="labelWork"><strong>My Work</strong></div>
 				</div>	
 				<div class="centroid" id="pathContainer">
-
+			
 
 					<div class="path" id="path1"></div>
 					<div class="path" id="path2"></div>
@@ -203,11 +203,12 @@
  <script> 
     $("#plButton").click(
     	function(){
-        $("#plContainer")
-        // .animate({"left": "-95px", "width": "20px"}).delay(200)
+        $("#data2")
+        .animate({"left": "500px"}).delay(200)
         // 	.animate({"top":"-255px", "left": "-250px", "width": "10px", "height": "10px"}).delay(200)
         // 	.animate({"left": "400px", "width": "10px", "height": "10px"}).delay(200)
-        .animate({"z-index":"500"}).delay(200)
+        $("#plContainer")
+        .delay(800).animate({"z-index":"500"}).delay(200)
         .animate({"border-radius":"0px", "width": "650px", "height": "250px", }).delay(200)
    		$("#plButton").prop('disabled', true);
    		$("#circle").css("animation", "1s rotate360 infinite linear"),200;
@@ -220,12 +221,13 @@
  <script> 
     $("#tlButton").click(
     	function(){
+    	$("#data3").animate({"left": "120px"}).delay(200).animate({"left": "460px", "top": "-150px"}).delay(200)
         $("#tlContainer")
-        	// .animate({"left": "95px", "width": "20px"}).delay(200)
+        	
         	// .animate({"top":"-200px", "left": "300px", "width": "10px", "height": "10px"}).delay(200)
-        	.animate({"z-index":"500"}).delay(200)
+        	.delay(1000).animate({"z-index":"500"}).delay(200)
         	.animate({"border-radius":"0px", "width": "500px", "height": "675px", }).delay(200)
-   		$("#tlButton").prop('disabled', false);
+   		$("#tlButton").prop('disabled', true);
    		$("#circle").css("animation", "1s rotate360 infinite linear"),200;
    		setTimeout(function(){
    			$("#circle").css("animation", "2s rotate360 infinite linear");
@@ -236,12 +238,11 @@
 <script> 
     $("#capstoneButton").click(
     	function(){
+        $("#data4").animate({"left": "-120px"}).delay(200).animate({"left": "-470px","top":"160px"});
         $("#capstoneContainer")
-        	// .animate({"left": "95px", "width": "20px"}).delay(200)
-        	// .animate({"top":"-200px", "left": "300px", "width": "10px", "height": "10px"}).delay(200)
-        	.animate({"z-index":"500"}).delay(200)
+        	.delay(1000).animate({"z-index":"500"}).delay(200)
         	.animate({"border-radius":"0px", "width": "500px", "height": "675px", }).delay(200)
-   		$("#capstoneButton").prop('disabled', false);
+   		$("#capstoneButton").prop("disabled", true);
    		$("#circle").css("animation", "1s rotate360 infinite linear"),200;
    		setTimeout(function(){
    			$("#circle").css("animation", "2s rotate360 infinite linear");
@@ -256,25 +257,30 @@
  <script type="text/javascript">
  	$("#closeSkills").click(function(){
  		$("#skillsContainer").animate({"width": "0px","height":"0px","border-radius": "50%"}).delay(200).animate({"z-index":"0"})
+ 		$("#data1").delay(1200).animate({"left":"105px", "top": "0px"}).delay(200).animate({"left": "-0px"}).delay(200)
  		$("#skills").prop('disabled', false);
  	})
  </script>
 
  <script type="text/javascript">
  	$("#closePlc").click(function(){
- 		$("#plContainer").animate({"width": "0px","height":"0px", "border-radius": "50%"}).delay(200).animate({"z-index":"0"})
+ 		$("#plContainer").delay(200).animate({"width": "0px","height":"0px", "border-radius": "50%"}).delay(200).animate({"z-index":"0"}).delay(200)
+ 		$("#data2").delay(1200)
+        .animate({"left": "0px"}).delay(200)
  		$("#plButton").prop('disabled', false);
  	})
  </script>
  <script type="text/javascript">
  	$("#closeTl").click(function(){
  		$("#tlContainer").animate({"width": "0px","height":"0px","border-radius": "50%"}).delay(200).animate({"z-index":"0"})
+ 		$("#data3").delay(1200).animate({"left": "120px", "top": "0px"}).delay(200).animate({"left": "0px"}).delay(200)
  		$("#tlButton").prop('disabled', false);
  	})
  </script>
 <script type="text/javascript">
  	$("#closeCapstone").click(function(){
  		$("#capstoneContainer").animate({"width": "0px","height":"0px","border-radius": "50%"}).delay(200).animate({"z-index":"0"})
+ 		$("#data4").delay(1000).animate({"left":"-120px","top":"0px"}).animate({"left": "0px"}).delay(200);
  		$("#capstoneButton").prop('disabled', false);
  	})
  </script>
