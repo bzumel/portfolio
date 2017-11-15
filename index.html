@@ -17,6 +17,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 </head>
 <body>
 	<header>
@@ -26,7 +27,7 @@
 		<div class="row">
 			<div class="col-sm-12 col-md-8 col-md-offset-2">
 				<div class="myname"><h1>Hi, I`m Engr. Bernard B. Zumel	</h1>
-  					<small>an aspiring web developer</small>
+  					<small>Web developer</small>
   			</div>
 
 			</div>
@@ -63,6 +64,8 @@
 						<div class="data" id="data2"></div>
 						<div class="data" id="data3"></div>
 						<div class="data" id="data4"></div>
+						<div class="data" id="data5"></div>
+						<div class="data" id="data6"></div>
 
 		  				<button onclick="function()" class="buttons" id="plButton"></button>
 		  			
@@ -74,7 +77,7 @@
 					</div>
 					<div class="textContainer" id="tlContainer">
 		  				<button onclick="function()" class="closeButtons" id="closeTl">Close</button>
-				  		<h2>Time Line</h2>
+				  		<h2><strong>Time Line</strong></h2>
 						<ul>
 							<li>
 								<h3>Tuitt Coding Bootcamp</h3>	
@@ -110,7 +113,7 @@
 
   					<div class="textContainer" id="plContainer">
   						<button onclick="function()" class="closeButtons" id="closePlc">Close</button>
-  						<h2>License and Certification</h2>	
+  						<h2><strong>License and Certification</strong></h2>	
 						<ul id="lc">
 							<li class="prccontainer">	
 								<img class="prc" src="imgs/prclogo.png">
@@ -131,14 +134,14 @@
   				<div class="textContainer" id="skillsContainer">
 					<button onclick="function()" class="closeButtons" id="closeSkills">Close</button>
 				
-					<h2>My Skills</h2>
+					<h2><strong>My Skills</strong></h2>
 					<h3>Markup/Programming Languages</h3>
 					<ul>
 						<li>HTML 5</li>	
 						<li>CSS 3</li>	
 						<li>Javascript</li>	
 						<li>PHP</li>	
-						<li>SQL</li>	
+						<li>MySQL</li>	
 					</ul>
 					<h3>Frameworks</h3>
 					<ul>
@@ -153,13 +156,29 @@
 					</ul>
 				</div>
 
-				<div class="textContainer" id="capstoneContainer">
-					<button onclick="function()" class="closeButtons" id="closeCapstone">Close</button>
-					<h2>My Work</h2>
+				<div class="textContainer caps" id="capstoneContainer1">
+					<h2>Capstone 1</h2>
 					<ul>
-						<li>
-							<a href="https://bzumel.github.io/easye/" target="_blank"><img class="capstonePics" src="imgs/capstone.jpg"></a>
+						<li>		
+							<a href="https://bzumel.github.io/easye/" target="_blank"><img id="capstonePics1" src="imgs/capstone.jpg"></a>
+						</li>
+						</ul>
+				</div>
 
+				<div class="textContainer caps" id="capstoneContainer2">
+					<button onclick="function()" class="closeButtons" id='closeAll'>Close</button>
+					<h2>Capstone 2</h2>
+					<ul>
+						<li>		
+							<a href="https://gundamium.000webhostapp.com/" target="_blank"><img id="capstonePics2" src="imgs/csp2.png"></a>
+						</li>
+				</div>
+
+				<div class="textContainer caps" id="capstoneContainer3">
+					<h2>Capstone 3</h2>
+					<ul>
+						<li>		
+							<a href="https://bzumel.github.io/easye/" target="_blank"><img id="capstonePics3" src="imgs/capstone.jpg"></a>
 						</li>
 					</ul>
 				</div>
@@ -187,15 +206,14 @@
     	function(){
     	$("#data1").animate({"left": "105"}).delay(200).animate({"left":"450", "top": "150px"}).delay(200)
         $("#skillsContainer").delay(1000)
-        // .animate({"left": "40%", "width": "20px"}).delay(200)
-        	// .animate({"top":"35%", "left": "10%", "width": "10px", "height": "10px"}).delay(200)
-        	// .animate({"left": "40%", "width": "10px", "height": "10px"}).delay(200)
         	.animate({"z-index":"500"}).delay(200)
         	.animate({"border-radius":"0px", "width": "500px", "height": "500px",  }).delay(200)
    		$("#skills").prop('disabled', true);
-   		$("#circle").css("animation", "1s rotate360 infinite linear"),200;
+   		$("#plButton").prop('disabled', true);
+ 		$("#tlButton").prop('disabled', true);
+ 		$("#capstoneButton").prop('disabled', true);
    		setTimeout(function(){
-   			$("#circle").css("animation", "2s rotate360 infinite linear");
+   			$("#circle").css("animation-duration", "1s");
    		});
      	})
  </script> 
@@ -210,10 +228,12 @@
         $("#plContainer")
         .delay(800).animate({"z-index":"500"}).delay(200)
         .animate({"border-radius":"0px", "width": "650px", "height": "250px", }).delay(200)
+   		$("#skills").prop('disabled', true);
    		$("#plButton").prop('disabled', true);
-   		$("#circle").css("animation", "1s rotate360 infinite linear"),200;
+ 		$("#tlButton").prop('disabled', true);
+ 		$("#capstoneButton").prop('disabled', true);
    		setTimeout(function(){
-   			$("#circle").css("animation", "2s rotate360 infinite linear");
+   			$("#circle").css("animation-duration", "1s");
    		});
      	})
  </script> 
@@ -226,11 +246,14 @@
         	
         	// .animate({"top":"-200px", "left": "300px", "width": "10px", "height": "10px"}).delay(200)
         	.delay(1000).animate({"z-index":"500"}).delay(200)
-        	.animate({"border-radius":"0px", "width": "500px", "height": "675px", }).delay(200)
-   		$("#tlButton").prop('disabled', true);
-   		$("#circle").css("animation", "1s rotate360 infinite linear"),200;
+        	.animate({"border-radius":"0px", "width": "500px", "height": "675px", }).delay(200);
+
+   		$("#skills").prop('disabled', true);
+   		$("#plButton").prop('disabled', true);
+ 		$("#tlButton").prop('disabled', true);
+ 		$("#capstoneButton").prop('disabled', true);
    		setTimeout(function(){
-   			$("#circle").css("animation", "2s rotate360 infinite linear");
+   			$("#circle").css("animation-duration", "1s");
    		});
      	})
  </script> 
@@ -239,13 +262,29 @@
     $("#capstoneButton").click(
     	function(){
         $("#data4").animate({"left": "-120px"}).delay(200).animate({"left": "-470px","top":"160px"});
-        $("#capstoneContainer")
-        	.delay(1000).animate({"z-index":"500"}).delay(200)
-        	.animate({"border-radius":"0px", "width": "500px", "height": "675px", }).delay(200)
-   		$("#capstoneButton").prop("disabled", true);
-   		$("#circle").css("animation", "1s rotate360 infinite linear"),200;
+        $("#capstoneContainer1")
+        	.delay(1000).animate({"z-index":"500"}).delay(200).animate({"left":"-260px","top":"-150px"})
+        	.animate({"border-radius":"0px", "width": "500px", "height": "300px", }).delay(200)
+        $("#data5").delay(600).animate({"left": "-120px"}).delay(200).animate({"left": "-470px","top":"160px"});	
+        $("#capstoneContainer2")
+        	.delay(1400).animate({"z-index":"500"}).delay(200).delay(200).animate({"left":"260px","top":"-150px"})
+        	.animate({"border-radius":"0px", "width": "500px", "height": "300px", }).delay(200)
+        $("#data6").delay(1200).animate({"left": "-120px"}).delay(200).animate({"left": "-470px","top":"160px"});
+        $("#capstoneContainer3")
+        	.delay(2000).animate({"z-index":"500"}).delay(200).delay(200).animate({"top":"170px"})
+        	.animate({"border-radius":"0px", "width": "500px", "height": "300px", }).delay(200)
+        $('#closeCapstone1').prop('disabled',false);
+        $('#closeCapstone2').prop('disabled',false);
+        $('#closeCapstone3').prop('disabled',false);
+
+
+
+   		$("#skills").prop('disabled', true);
+   		$("#plButton").prop('disabled', true);
+ 		$("#tlButton").prop('disabled', true);
+ 		$("#capstoneButton").prop('disabled', true);
    		setTimeout(function(){
-   			$("#circle").css("animation", "2s rotate360 infinite linear");
+   			$("#circle").css("animation-duration", "1s");
    		});
      	})
  </script> 
@@ -257,8 +296,15 @@
  <script type="text/javascript">
  	$("#closeSkills").click(function(){
  		$("#skillsContainer").animate({"width": "0px","height":"0px","border-radius": "50%"}).delay(200).animate({"z-index":"0"})
- 		$("#data1").delay(1200).animate({"left":"105px", "top": "0px"}).delay(200).animate({"left": "-0px"}).delay(200)
+ 		$("#data1").delay(1200).animate({"left":"105px", "top": "0px"}).delay(200).animate({"left": "-0px"}).delay(200);
+ 		setTimeout(function(){
+   			$("#circle").css("animation-duration", "6s");
+   		});
  		$("#skills").prop('disabled', false);
+ 		$("#plButton").prop('disabled', false);
+ 		$("#tlButton").prop('disabled', false);
+ 		$("#capstoneButton").prop('disabled', false);
+ 		
  	})
  </script>
 
@@ -266,24 +312,55 @@
  	$("#closePlc").click(function(){
  		$("#plContainer").delay(200).animate({"width": "0px","height":"0px", "border-radius": "50%"}).delay(200).animate({"z-index":"0"}).delay(200)
  		$("#data2").delay(1200)
-        .animate({"left": "0px"}).delay(200)
+        .animate({"left": "0px"}).delay(200);
+        setTimeout(function(){
+   			$("#circle").css("animation-duration", "6s");
+   		});
+ 		$("#skills").prop('disabled', false);
  		$("#plButton").prop('disabled', false);
+ 		$("#tlButton").prop('disabled', false);
+ 		$("#capstoneButton").prop('disabled', false);
  	})
  </script>
  <script type="text/javascript">
  	$("#closeTl").click(function(){
  		$("#tlContainer").animate({"width": "0px","height":"0px","border-radius": "50%"}).delay(200).animate({"z-index":"0"})
- 		$("#data3").delay(1200).animate({"left": "120px", "top": "0px"}).delay(200).animate({"left": "0px"}).delay(200)
+ 		$("#data3").delay(1200).animate({"left": "120px", "top": "0px"}).delay(200).animate({"left": "0px"}).delay(200);
+ 		setTimeout(function(){
+   			$("#circle").css("animation-duration", "6s");
+   		});
+ 		$("#skills").prop('disabled', false);
+ 		$("#plButton").prop('disabled', false);
  		$("#tlButton").prop('disabled', false);
- 	})
- </script>
-<script type="text/javascript">
- 	$("#closeCapstone").click(function(){
- 		$("#capstoneContainer").animate({"width": "0px","height":"0px","border-radius": "50%"}).delay(200).animate({"z-index":"0"})
- 		$("#data4").delay(1000).animate({"left":"-120px","top":"0px"}).animate({"left": "0px"}).delay(200);
  		$("#capstoneButton").prop('disabled', false);
  	})
  </script>
 
+ </script>
+<script type="text/javascript">
+ 	$("#closeAll").click(function(){
+ 		$("#capstoneContainer1").animate({"width": "20px","height":"20px","border-radius": "50%"})
+ 			.delay(200).animate({"left":"0px","top":"0px","z-index":"0"})
+ 		$("#data4").delay(1000).animate({"left":"-120px","top":"0px"}).animate({"left": "0px"}).delay(200);
+
+   		$("#capstoneContainer2").delay(500).animate({"width": "20px","height":"20px","border-radius": "50%"})
+   			.delay(200).animate({"left":"0px","top":"0px","z-index":"0"})
+ 		$("#data5").delay(1600).animate({"left":"-120px","top":"0px"}).animate({"left": "0px"}).delay(200);
+
+ 	  	$("#capstoneContainer3").delay(1000).animate({"width": "20px","height":"20px","border-radius": "50%"})
+ 	  		.delay(200).animate({"left":"0px","top":"0px","z-index":"0"})
+ 		$("#data6").delay(2200).animate({"left":"-120px","top":"0px"}).animate({"left": "0px"}).delay(200);
+
+ 		setTimeout(function(){
+   		$("#circle").css("animation-duration", "6s");
+   		});
+ 		$("#skills").prop('disabled', false);
+ 		$("#plButton").prop('disabled', false);
+ 		$("#tlButton").prop('disabled', false);
+ 		$("#capstoneButton").prop('disabled', false);
+ 	})
+
+
+ </script>
 </body>
 </html>

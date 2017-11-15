@@ -180,7 +180,7 @@ main {
   padding: 0;
   margin: 1em auto;
   margin:0;
-  margin-top: 	-50%;
+  margin-top: -50%;
   margin-left: 	-50%;
   width: 450px;
   height: 450px;
@@ -189,7 +189,9 @@ main {
   list-style: none;
   overflow: hidden;
   list-style-position: 	inside;	
-  animation: 6s rotate360 infinite linear;/**/
+  animation: rotate360 infinite linear;/**/
+  /*animation-delay: 5000ms;*/
+  animation-duration: 6s;
   /*border: 1px solid white;*/
   box-shadow: inset 0 0 100px #3be307, 0 0 100px #3be307;
   /*animation-name: rotate360;
@@ -236,10 +238,10 @@ ul {
 	color: green;
 	overflow: hidden;
 	background-color: black;
-	height: 1px;
-	width: 1px;
+	height:0px;
+	width: 0px;
 	border-radius: 50%;
-	border: 5px solid #3be307;
+	/*border: 5px solid #3be307;*/
 	margin-top: 50%;
 	margin-left: 50%;
 	transform: translate(-50%,-50%);
@@ -293,14 +295,43 @@ ul {
 	display: inline-block;	
 }
 
-.capstonePics {
+.caps {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+
+}
+
+#capstonePics1 {
 	position: absolute;
 	height: 200px;
 	width: 300px;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-left: 40%;
 	transform: translate(-50%);
 }
+
+#capstonePics2 {
+	position: absolute;
+	height: 200px;
+	width: 300px;
+	margin-top: 10px;
+	margin-left: 40%;
+	transform: translate(-50%);
+}
+
+#capstonePics3 {
+	position: absolute;
+	height: 200px;
+	width: 300px;
+	margin-top: 10px;
+	margin-left: 40%;
+	transform: translate(-50%);
+}
+
+
+
+
 #pathContainer {
 	height: 500px;
 	width: 500px;		
@@ -336,6 +367,21 @@ ul {
 	margin-left: 617px;
 	transform: translate(-50%, -50%);
 }
+#data5 {
+	margin-top: 0%;
+	margin-left: 617px;
+	transform: translate(-50%, -50%);
+}
+#data6 {
+	margin-top: 0%;
+	margin-left: 617px;
+	transform: translate(-50%, -50%);
+}
+
+
+
+
+
 .path {
 	position: absolute;
 	border-top: 5px solid green;
@@ -434,6 +480,13 @@ ul {
 	border: none;
 	margin-left: 97%; 
 	transform: translate(-100%);
+}
+.closeAll {
+	position: absolute;
+	color: 	red;
+	background-color: black;
+	border: none;
+	/*transform: translate(-100%	);*/
 }
 
 
