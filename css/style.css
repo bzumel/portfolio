@@ -1,6 +1,7 @@
 
 body {
 	 background-color: black;
+	 background-image: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-238002.jpg');
 }
 
 main {
@@ -43,6 +44,12 @@ main {
 	transform: translate(-50%, -50%);
 }
 
+#labelContact {
+	width: 100%;
+	margin-top: 47%;
+	margin-left: 620px;
+	transform: translate(-50%, -50%);
+}
 
 .myname {
 	color: 	#fff;
@@ -69,6 +76,7 @@ main {
 }
 
 #outerCircle {
+	background-color: #000;
 	height: 400px;
 	width: 400px;
 	border-radius: 50%;
@@ -265,6 +273,14 @@ ul {
 	transform: translate(-50%, -50%);	*/
 	/*z-index: 300;*/
 }
+
+#contactContainer {
+	position: absolute;
+	border-color: #3be307;
+	height: 0px;
+	width: 0px;
+}
+
 #lc{
 	padding-left: 5px;
 
@@ -378,6 +394,11 @@ ul {
 	transform: translate(-50%, -50%);
 }
 
+#data7 {
+	margin-top: 50%;
+	margin-left: 637px;
+	transform: translate(-50%, -50%);
+}
 
 
 
@@ -438,6 +459,14 @@ ul {
 	width: 300px;
 }
 
+#path8 {
+	margin-top: 247px;
+	margin-left: 335px;
+	width: 400px;
+
+
+}
+
 
 .buttons {
 	position: absolute;
@@ -468,6 +497,12 @@ ul {
 #capstoneButton{
 	margin-top: 0%;
 	margin-left: 617px;
+	transform: translate(-50%, -50%);
+}
+
+#contactButton{
+	margin-top: 50%;
+	margin-left: 637px;	
 	transform: translate(-50%, -50%);
 }
 

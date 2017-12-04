@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
@@ -28,6 +29,7 @@
 			<div class="col-sm-12 col-md-8 col-md-offset-2">
 				<div class="myname"><h1>Hi, I`m Engr. Bernard B. Zumel	</h1>
   					<small>Web developer</small>
+
   			</div>
 
 			</div>
@@ -41,6 +43,7 @@
 					<div class="labels" id="labelLC"><strong>License and Certificate</strong></div>
 					<div class="labels" id="labelTL"><strong>Time Line</strong></div>
 					<div class="labels" id="labelWork"><strong>My Work</strong></div>
+					<div class="labels" id="labelContact"><strong>Contact Me/ Resume</strong></div>
 				</div>	
 				<div class="centroid" id="pathContainer">
 			
@@ -52,6 +55,7 @@
 					<div class="path" id="path5"></div>
 					<div class="path" id="path6"></div>
 					<div class="path" id="path7"></div>
+					<div class="path" id="path8"></div>
 					
 				</div>
 				<div class="centroid" id="mask">					
@@ -66,6 +70,7 @@
 						<div class="data" id="data4"></div>
 						<div class="data" id="data5"></div>
 						<div class="data" id="data6"></div>
+						<div class="data" id="data7"></div>
 
 		  				<button onclick="function()" class="buttons" id="plButton"></button>
 		  			
@@ -73,6 +78,7 @@
 		  			
 						<button onclick="function()" class="buttons" id="skills"></button>
 						<button onclick="function()" class="buttons" id="capstoneButton"></button>
+						<button onclick="function()" class="buttons" id="contactButton"></button>
 						<!-- <button onclick="function()" class="buttons" id="personalButton"></button> -->
 					</div>
 					<div class="textContainer" id="tlContainer">
@@ -145,9 +151,10 @@
 					</ul>
 					<h3>Frameworks</h3>
 					<ul>
-						<li>Bootstrap 3</li>	
+						<li>Bootstrap 3</li>
 						<li>JQuery</li>	
-						<li>Laravel</li>	
+						<li>Laravel</li>
+						<li>Angular</li>
 					</ul>
 					<h3>CCNA</h3>
 					<ul>	
@@ -178,15 +185,30 @@
 					<h2>Capstone 3</h2>
 					<ul>
 						<li>		
-							<a href="https://bzumel.github.io/easye/" target="_blank"><img id="capstonePics3" src="imgs/capstone.jpg"></a>
+							<a href="https://mypc0815.000webhostapp.com/" target="_blank"><img id="capstonePics3" src="imgs/csp3.png"></a>
 						</li>
 					</ul>
 				</div>
 
+				<div class='textContainer' id='contactContainer'>
+					<button onclick="function()" class="closeButtons" id="closeContact">Close</button>
+					<h2>Contact me</h2>
+					<ul>
+						<li><span class='fa fa-mobile-phone'></span> Mobile No.: +639173264390/+639065655420</li>
+						<li><span class='fa fa-envelope-o'></span> E-mail Address: engr.zumel@gmial.com</li>
+						<li><span class='fa fa-facebook-official'"></span> Facebook: <a href="https://web.facebook.com/dumaralos123?ref=bookmarks" target='_blank'>Bernard Zumel</a></li>
+					</ul>
+					<ul><h3>Resume</h3>
+												<li><a href="zumel_bernard.pdf" download><span class='fa fa-download' style="font-size: 30px"></span></a></li>
+					</ul>
+				</div>
 
-
-
+			
 		</div>
+
+
+		
+		
 
 			<div class="thisCenter">
 				<div id="circle">
@@ -212,6 +234,7 @@
    		$("#plButton").prop('disabled', true);
  		$("#tlButton").prop('disabled', true);
  		$("#capstoneButton").prop('disabled', true);
+		$("#contactButton").prop('disabled', true);
    		setTimeout(function(){
    			$("#circle").css("animation-duration", "1s");
    		});
@@ -232,6 +255,7 @@
    		$("#plButton").prop('disabled', true);
  		$("#tlButton").prop('disabled', true);
  		$("#capstoneButton").prop('disabled', true);
+		$("#contactButton").prop('disabled', true);
    		setTimeout(function(){
    			$("#circle").css("animation-duration", "1s");
    		});
@@ -252,6 +276,7 @@
    		$("#plButton").prop('disabled', true);
  		$("#tlButton").prop('disabled', true);
  		$("#capstoneButton").prop('disabled', true);
+ 		$("#contactButton").prop('disabled', true);
    		setTimeout(function(){
    			$("#circle").css("animation-duration", "1s");
    		});
@@ -283,6 +308,7 @@
    		$("#plButton").prop('disabled', true);
  		$("#tlButton").prop('disabled', true);
  		$("#capstoneButton").prop('disabled', true);
+ 		$("#contactButton").prop('disabled', true);
    		setTimeout(function(){
    			$("#circle").css("animation-duration", "1s");
    		});
@@ -290,7 +316,22 @@
  </script> 
 
 
-
+<script type="text/javascript">
+	$("#contactButton").click(
+		function(){
+			$('#data7').animate({"left":"-500px"}).delay(200);
+			$('#contactContainer').delay(800).animate({"z-index":"500"}).delay(200)
+        .animate({"border-radius":"0px", "width": "650px", "height": "250px", }).delay(200);
+        $("#skills").prop('disabled', true);
+   		$("#plButton").prop('disabled', true);
+ 		$("#tlButton").prop('disabled', true);
+ 		$("#capstoneButton").prop('disabled', true);
+ 		$("#contactButton").prop('disabled', true);
+ 		setTimeout(function(){
+   			$("#circle").css("animation-duration", "1s");
+   		});
+		})
+</script>
 
 
  <script type="text/javascript">
@@ -304,6 +345,7 @@
  		$("#plButton").prop('disabled', false);
  		$("#tlButton").prop('disabled', false);
  		$("#capstoneButton").prop('disabled', false);
+		$("#contactButton").prop('disabled', false);
  		
  	})
  </script>
@@ -320,6 +362,7 @@
  		$("#plButton").prop('disabled', false);
  		$("#tlButton").prop('disabled', false);
  		$("#capstoneButton").prop('disabled', false);
+ 				$("#contactButton").prop('disabled', false);
  	})
  </script>
  <script type="text/javascript">
@@ -333,10 +376,10 @@
  		$("#plButton").prop('disabled', false);
  		$("#tlButton").prop('disabled', false);
  		$("#capstoneButton").prop('disabled', false);
+ 				$("#contactButton").prop('disabled', false);
  	})
  </script>
 
- </script>
 <script type="text/javascript">
  	$("#closeAll").click(function(){
  		$("#capstoneContainer1").animate({"width": "20px","height":"20px","border-radius": "50%"})
@@ -358,9 +401,25 @@
  		$("#plButton").prop('disabled', false);
  		$("#tlButton").prop('disabled', false);
  		$("#capstoneButton").prop('disabled', false);
+ 				$("#contactButton").prop('disabled', false);
  	})
 
 
+ </script>
+ <script type="text/javascript">
+ 	$('#closeContact').click(function(){
+ 		$('#contactContainer').animate({"width": "0px","height":"0px", "border-radius": "50%"}).delay(200).animate({"z-index":"0"}).delay(200);
+ 		$('#data7').delay(800).animate({"left":"0"});
+
+ 	setTimeout(function(){
+   		$("#circle").css("animation-duration", "6s");
+   		});
+ 		$("#skills").prop('disabled', false);
+ 		$("#plButton").prop('disabled', false);
+ 		$("#tlButton").prop('disabled', false);
+ 		$("#capstoneButton").prop('disabled', false);
+ 				$("#contactButton").prop('disabled', false);
+ 	})
  </script>
 </body>
 </html>
